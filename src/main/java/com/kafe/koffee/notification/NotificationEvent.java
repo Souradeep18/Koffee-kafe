@@ -1,0 +1,17 @@
+package com.kafe.koffee.notification;
+
+public enum NotificationEvent {
+	
+	   CART_REMINDER,
+	   ORDER_PLACED,
+	   ORDER_CONFIRMED,
+	   ORDER_PREPARING,
+	   ORDER_READY,
+	   ORDER_COMPLETED,
+	   ORDER_CANCELLED,
+	   PAYMENT_SUCCESS,
+	   PAYMENT_FAILED,
+       PAYMENT_CANCELLED,
+       PAYMENT_REFUNDED
+
+}
