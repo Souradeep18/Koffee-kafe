@@ -5,10 +5,8 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-import com.kafe.koffee.enums.NotificationEvent;
-
 @Entity
-@Table(name = "notifications")
+@Table(name = "feedback")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,7 +14,8 @@ import com.kafe.koffee.enums.NotificationEvent;
 @Builder
 @ToString(exclude = "user")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Notification {
+
+public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
@@ -26,31 +25,16 @@ public class Notification {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private NotificationEvent event;
-
-    @Column(nullable = false)
-    private String title;
-
     @Column(nullable = false, columnDefinition = "TEXT")
     private String message;
 
     @Column(nullable = false)
     @Builder.Default
-    private boolean sent = false;
-    
-    @Column(nullable = false)
-    @Builder.Default
-    private boolean read = false;
-
-    @Column(nullable = false)
-    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    private LocalDateTime sentAt;
-
-    private LocalDateTime readAt;
+    @Column(nullable = false)
+    @Builder.Default
+    private boolean reviewed = false;
 	
 
 }

@@ -12,6 +12,12 @@ public enum NotificationEvent {
 	   PAYMENT_SUCCESS,
 	   PAYMENT_FAILED,
        PAYMENT_CANCELLED,
-       PAYMENT_REFUNDED
+       PAYMENT_REFUNDED,
+       
+       EMAIL_VERIFICATION,
+       RECOMMENDATION,
+       PASSWORD_RESET,
+       FEEDBACK_RECEIVED
+       
 
 }
