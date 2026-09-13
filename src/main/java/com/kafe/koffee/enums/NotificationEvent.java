@@ -1,4 +1,4 @@
-package com.kafe.koffee.notification;
+package com.kafe.koffee.enums;
 
 public enum NotificationEvent {
 	
