@@ -21,4 +21,8 @@ public interface OrderRepository extends JpaRepository<Order,Long> {
             Long userId,
             OrderStatus status
     );
+    long countByUserIdAndStatus(
+            Long userId,
+            OrderStatus status
+    );
 }

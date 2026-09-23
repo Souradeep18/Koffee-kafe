@@ -3,8 +3,10 @@ package com.kafe.koffee.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import com.kafe.koffee.enums.Gender;
 import com.kafe.koffee.enums.Role;
 
 @Entity
@@ -43,5 +45,11 @@ public class User {
     @Column(nullable = false)
     @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
+    
+    //New fields
+    private LocalDate dateOfBirth;
+
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
 }
